@@ -17,28 +17,3 @@ client.on('message', (topic, message) => {
   console.log('Pesan diterima pada topik:', topic);
   console.log('Isi pesan:', message.toString());
 });
-
-// Handle error jika terjadi masalah
-client.on('error', (error) => {
-  console.error('Error:', error);
-});
-
-// Handle event ketika client disconnect
-client.on('disconnect', () => {
-  console.log('Terputus dari broker MQTT');
-});
-
-// Handle event ketika client close
-client.on('close', () => {
-  console.log('Koneksi MQTT ditutup');
-});
-
-// Handle event ketika client reconnect
-client.on('reconnect', () => {
-  console.log('Menghubungkan ulang ke broker MQTT...');
-});
-
-// Handle event ketika client offline
-client.on('offline', () => {
-  console.log('Klien offline');
-});
